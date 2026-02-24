@@ -18,8 +18,8 @@ private:
   static size_t totalSize;
 public:
   CPU(size_t ramSize) {
+    totalSize = ramSize;
     try{
-      totalSize = ramSize;
       memory = new uint64_t[ramSize]();
     }catch (std::bad_alloc){
       std::cout << "[CPU]: Not enough memory" << std::endl;
